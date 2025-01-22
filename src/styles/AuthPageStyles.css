@@ -1,0 +1,7 @@
+/* Mobil ve küçük ekranlar için (768px ve daha küçük) */
+@media (max-width: 768px) {
+    .login-container {
+        position: relative;
+        top: 40%;
+    }
+}

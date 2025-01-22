@@ -1,0 +1,21 @@
+
+services:
+  frontend:
+    build: .
+    image: tfo_mafnu_frontend_image
+    container_name: mafnu_frontend_v1
+    ports:
+      - "5173:5173"
+    volumes:
+      - /var/www/dockerapps/mafnu.tfo.k12.tr/front_end:/dockerapps/mafnu.tfo.k12.tr/front_end
+      - node_modules:/dockerapps/mafnu.tfo.k12.tr/front_end/node_modules
+    networks:
+      - mafnu-network
+
+volumes:
+  node_modules:
+    driver: local  # node_modules için yerel bir volume oluşturuluyor
+
+networks:
+  mafnu-network:
+    external: true

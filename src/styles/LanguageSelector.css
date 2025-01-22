@@ -1,0 +1,86 @@
+.language-selector {
+    display: flex;
+    gap: 8px;
+}
+
+.lang-button {
+    background: #f0f0f0;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.lang-button .icon {
+    font-size: 16px;
+}
+
+.lang-button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.lang-button.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+.lang-button.active .icon {
+    color: white;
+}
+
+.lang-button:not(.active) {
+    color: #333;
+}
+
+/* Language Selector sağ üstte konumlandırma */
+.language-selector-container {
+    justify-items: right;
+    min-height: 46px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    /*position: absolute;*/
+    /*top: 10px;*/
+    /*right: 10px;*/
+    /*z-index: 1000; !* Üstte görünmesi için yüksek bir değer *!*/
+}
+
+/* Form konteynerini ortalamak için */
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+    .language-selector {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        gap: 4px;
+        z-index: 1;
+    }
+    .lang-button {
+        background: #f0f0f0;
+        padding: 4px 6px;
+        border-radius: 4px;
+        font-size: 12px;
+        gap: 4px;
+    }
+    .lang-button .icon {
+        font-size: 12px;
+    }
+}

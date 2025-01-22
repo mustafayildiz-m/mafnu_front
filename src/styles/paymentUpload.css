@@ -1,0 +1,125 @@
+
+.img-thumbnail-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.img-thumbnail-preview:hover {
+    transform: scale(1.1);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Modal İçerik */
+.modal-content {
+    position: relative;
+    max-width: 500px; /* Orta seviye genişlik */
+    max-height: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Modal Resim */
+.modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Save Butonu */
+.modal-save-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-save-btn:hover {
+    background-color: #45a049;
+}
+
+/* Kapat Butonu */
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close-btn:hover {
+    background-color: #e60000;
+}
+
+
+.file-icon {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.file-icon:hover {
+    transform: scale(1.1); /* Hover efekti */
+    background-color: #e6e6e6;
+}
+
+
+.file-icon-container {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.file-icon-container:hover {
+    transform: scale(1.1); /* Hover sırasında büyüme efekti */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.file-icon-container i {
+    transition: color 0.3s ease;
+}
